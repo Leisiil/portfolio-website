@@ -1,23 +1,18 @@
+/* style.css */
 body {
     font-family: Arial, sans-serif;
+    background: #0d0f27; /* Dunkler Weltraum-Hintergrund */
+    color: #fff;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
     text-align: center;
+    padding: 60px 0;
+    background-image: url('assets/images/space-background.jpg');
+    background-size: cover;
+    color: #fff;
+    animation: fadeIn 2s ease-in;
 }
 
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-h2 {
-    color: #333;
-}
+/* Weitere CSS-Stile folgen hier... */
