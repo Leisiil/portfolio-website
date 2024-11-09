@@ -1,4 +1,4 @@
-/* Reset und allgemeine Einstellungen */
+/* Allgemeine Reset-Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,170 +6,112 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica', sans-serif;
+    color: #fff;
     background-color: #111;
-    color: #fff;
-    overflow-x: hidden;
 }
 
-h1, h2, h3, p {
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 20px;
-}
-
-/* Header */
+/* Hero Section */
 .hero {
-    background: url('assets/images/space-background.jpg') no-repeat center center/cover;
     height: 100vh;
+    background: url('assets/images/space-background.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
-    color: #fff;
-    overflow: hidden;
 }
 
 .hero-content {
-    animation: fadeIn 2s ease-in-out;
+    animation: fadeIn 1.5s ease-out;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-size: 3.5rem;
     margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
 }
 
-.cta-button {
+.cta {
     background-color: #f1c40f;
-    color: #0b0c10;
+    color: #111;
     padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 5px;
+    font-size: 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
+.cta:hover {
     background-color: #d1a100;
 }
 
-/* Über Mich Section */
-#about {
+/* Allgemeine Sektionen */
+.section {
+    padding: 80px 0;
     background-color: #222;
-    padding: 60px 0;
-    text-align: center;
 }
 
-#about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #f1c40f;
-}
-
-#about p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    max-width: 800px;
+.container {
+    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
-}
-
-/* Portfolio Section */
-#portfolio {
-    background-color: #111;
-    padding: 60px 0;
     text-align: center;
 }
 
-#portfolio h2 {
-    font-size: 2.5rem;
+h2 {
+    font-size: 2rem;
     margin-bottom: 30px;
     color: #f1c40f;
 }
 
-.portfolio-items {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+/* Portfolio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
 .portfolio-item {
-    background-color: #2a2f3a;
+    background-color: #333;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 300px;
-    text-align: center;
 }
 
 .portfolio-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .portfolio-item img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.portfolio-item h3 {
-    font-size: 1.5rem;
-    color: #f1c40f;
-}
-
-/* Kontakt Section */
-#contact {
-    background-color: #222;
-    padding: 60px 0;
-    text-align: center;
-}
-
-#contact p {
-    font-size: 1.2rem;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
-#contact a {
-    background-color: #f1c40f;
-    color: #0b0c10;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-#contact a:hover {
-    background-color: #d1a100;
+.portfolio-item p {
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 /* Footer */
 footer {
     background-color: #111;
-    padding: 30px;
     text-align: center;
+    padding: 40px;
     color: #888;
-    font-size: 1rem;
 }
 
-/* Fade-in Animation */
+/* Animation */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -185,22 +127,22 @@ footer {
     animation: fadeIn 1.5s ease-out;
 }
 
+.cta {
+    animation: fadeIn 2s ease-out;
+}
+
 /* Responsives Design */
 @media (max-width: 768px) {
-    .portfolio-items {
-        flex-direction: column;
-    }
-
-    .portfolio-item {
-        width: 90%;
-    }
-
     .hero h1 {
         font-size: 2.5rem;
     }
 
-    .cta-button {
+    .cta {
         padding: 12px 25px;
         font-size: 1rem;
+    }
+
+    .container {
+        width: 90%;
     }
 }
