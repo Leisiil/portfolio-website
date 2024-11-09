@@ -24,7 +24,7 @@ header {
 
 h1 {
     font-size: 3rem;
-    color: #f1c40f; /* Sonnengelb, gleiche Farbe wie der Button */
+    color: #f1c40f; /* Sonnengelb */
     text-shadow: 0 0 15px rgba(241, 196, 15, 0.8); /* Optionaler Glüheffekt */
     margin: 0;
 }
