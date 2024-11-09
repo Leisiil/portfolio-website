@@ -1,148 +1,183 @@
-/* Allgemeine Reset-Styles */
-* {
+/* Allgemeine Styles für die gesamte Seite */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #0d0f27; /* Dunkler Weltraum-Hintergrund */
+    color: #fff;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Verhindert horizontalen Scrollen */
+}
+
+* {
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Helvetica', sans-serif;
+/* Header und Einführungstext */
+header {
+    text-align: center;
+    padding: 100px 0;
+    background-image: url('assets/images/space-background.jpg');
+    background-size: cover;
     color: #fff;
-    background-color: #111;
+    animation: fadeIn 2s ease-in-out;
 }
 
-/* Hero Section */
-.hero {
-    height: 100vh;
-    background: url('assets/images/space-background.jpg') no-repeat center center/cover;
+h1 {
+    font-size: 3rem;
+    color: #f1c40f; /* Sonnengelb, gleiche Farbe wie der Button */
+    text-shadow: 0 0 15px rgba(241, 196, 15, 0.8); /* Optionaler Glüheffekt */
+    margin: 0;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: rgba(241, 196, 15, 0.9); /* Helleres Gelb für den Beschreibungstext */
+}
+
+/* Über mich Bereich */
+#about {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #f1c40f; /* Sonnengelb */
+    text-shadow: 0 0 10px rgba(241, 196, 15, 0.8);
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+/* Projekte Bereich */
+#projects {
+    padding: 60px 20px;
+    background-color: #1c1c3c; /* Dunkler Hintergrund für den Projekte-Bereich */
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #f1c40f; /* Sonnengelb */
+    text-shadow: 0 0 10px rgba(241, 196, 15, 0.8);
+}
+
+.project {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-}
-
-.hero-content {
-    animation: fadeIn 1.5s ease-out;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    font-weight: 600;
-    letter-spacing: 3px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-}
-
-.cta {
-    background-color: #f1c40f;
-    color: #111;
-    padding: 15px 30px;
-    font-size: 1rem;
-    border-radius: 30px;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background-color 0.3s ease;
-}
-
-.cta:hover {
-    background-color: #d1a100;
-}
-
-/* Allgemeine Sektionen */
-.section {
-    padding: 80px 0;
-    background-color: #222;
-}
-
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #f1c40f;
-}
-
-/* Portfolio */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.portfolio-item {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
-.portfolio-item:hover {
+.project:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(241, 196, 15, 0.6); /* Schöner Schimmer bei Hover */
 }
 
-.portfolio-item img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.project h3 {
+    color: #f1c40f;
+    font-size: 1.8rem;
 }
 
-.portfolio-item p {
+.project p {
+    color: #bbb;
     font-size: 1.1rem;
-    font-weight: 500;
+}
+
+/* Buttons */
+button {
+    background-color: #f1c40f;
+    color: #0d0f27;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #e67e22;
+    transform: scale(1.1);
+}
+
+/* Kontaktbereich */
+#contact {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #1c1c3c;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: #f1c40f;
+    text-shadow: 0 0 10px rgba(241, 196, 15, 0.8);
+}
+
+#contact p {
+    font-size: 1.2rem;
+    color: #ccc;
 }
 
 /* Footer */
 footer {
     background-color: #111;
-    text-align: center;
-    padding: 40px;
     color: #888;
+    text-align: center;
+    padding: 20px;
 }
 
-/* Animation */
+/* Animationen */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
-.fadeIn {
-    animation: fadeIn 1.5s ease-out;
+@keyframes fadeInMoveUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-.cta {
-    animation: fadeIn 2s ease-out;
+/* Parallax Scrolling Effekt für den Hintergrund */
+body {
+    background-image: url('assets/images/space-background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
-/* Responsives Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
+/* Responsive Design für mobile Geräte */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
     }
 
-    .cta {
-        padding: 12px 25px;
+    header p {
         font-size: 1rem;
     }
 
-    .container {
-        width: 90%;
+    #about, #projects, #contact {
+        padding: 40px 20px;
+    }
+
+    .project {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 1rem;
     }
 }
