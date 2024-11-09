@@ -3,31 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hanspeter's Space Portfolio</title>
+    <title>Hanspeter's Kreative Bewerbung</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Hanspeter's Galaxy</h1>
-        <p>Exploring the infinite world of IT and development!</p>
+
+    <!-- Header Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="fadeIn">Hallo, ich bin Hanspeter</h1>
+            <p class="fadeIn">Ein kreativer Kopf mit einer Leidenschaft für Design und Innovation</p>
+            <a href="#portfolio" class="cta-button">Mein Portfolio</a>
+        </div>
     </header>
-    <main>
-        <section id="about">
-            <h2>Über mich</h2>
-            <p>Ich bin ein IT-Lernender mit einer Leidenschaft für Technologie und Weltraumabenteuer.</p>
-        </section>
-        <section id="projects">
-            <h2>Projekte</h2>
-            <div class="project">
-                <h3>Projektname 1</h3>
-                <p>Beschreibung des Projekts im Weltraum-Thema.</p>
+
+    <!-- Über Mich Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="fadeIn">Über Mich</h2>
+            <p class="fadeIn">Ich bin Designer und Entwickler mit einem Sinn für Ästhetik und einem Fokus auf Benutzererfahrung. Ich strebe danach, einfache, aber eindrucksvolle Designs zu schaffen, die Geschichten erzählen.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="fadeIn">Mein Portfolio</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item fadeIn">
+                    <img src="https://via.placeholder.com/400x300" alt="Projekt 1">
+                    <h3>Projekt 1</h3>
+                </div>
+                <div class="portfolio-item fadeIn">
+                    <img src="https://via.placeholder.com/400x300" alt="Projekt 2">
+                    <h3>Projekt 2</h3>
+                </div>
+                <div class="portfolio-item fadeIn">
+                    <img src="https://via.placeholder.com/400x300" alt="Projekt 3">
+                    <h3>Projekt 3</h3>
+                </div>
             </div>
-        </section>
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <p>Kontaktiere mich: hanspeter@example.com</p>
-        </section>
-    </main>
-    <script src="script.js"></script>
+        </div>
+    </section>
+
+    <!-- Kontakt Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="fadeIn">Kontakt</h2>
+            <p class="fadeIn">Lass uns zusammenarbeiten! Ich freue mich darauf, von dir zu hören.</p>
+            <a href="mailto:hanspeter@example.com" class="cta-button">E-Mail senden</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Hanspeter | Alle Rechte vorbehalten.</p>
+    </footer>
+
 </body>
 </html>
