@@ -1,183 +1,148 @@
-/* Allgemeine Styles für die gesamte Seite */
-body {
-    font-family: 'Roboto', sans-serif;
-    background: #0d0f27; /* Dunkler Weltraum-Hintergrund */
-    color: #fff;
+/* Allgemeine Reset-Styles */
+* {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Verhindert horizontalen Scrollen */
-}
-
-* {
     box-sizing: border-box;
 }
 
-/* Header und Einführungstext */
-header {
-    text-align: center;
-    padding: 100px 0;
-    background-image: url('assets/images/space-background.jpg');
-    background-size: cover;
-    color: #f1c40f;
-    animation: fadeIn 2s ease-in-out;
+body {
+    font-family: 'Helvetica', sans-serif;
+    color: #fff;
+    background-color: #111;
 }
 
-h1 {
-    font-size: 3rem;
-    color: #f1c40f; /* Sonnengelb */
-    text-shadow: 0 0 15px rgba(241, 196, 15, 0.8); /* Optionaler Glüheffekt */
-    margin: 0;
-}
-
-p {
-    font-size: 1.2rem;
-    margin-top: 20px;
-    color: rgba(241, 196, 15, 0.9); /* Helleres Gelb für den Beschreibungstext */
-}
-
-/* Über mich Bereich */
-#about {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    color: #f1c40f; /* Sonnengelb */
-    text-shadow: 0 0 10px rgba(241, 196, 15, 0.8);
-}
-
-#about p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 20px auto;
-    line-height: 1.5;
-    color: #ccc;
-}
-
-/* Projekte Bereich */
-#projects {
-    padding: 60px 20px;
-    background-color: #1c1c3c; /* Dunkler Hintergrund für den Projekte-Bereich */
-}
-
-#projects h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    color: #f1c40f; /* Sonnengelb */
-    text-shadow: 0 0 10px rgba(241, 196, 15, 0.8);
-}
-
-.project {
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('assets/images/space-background.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
 }
 
-.project:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(241, 196, 15, 0.6); /* Schöner Schimmer bei Hover */
+.hero-content {
+    animation: fadeIn 1.5s ease-out;
 }
 
-.project h3 {
-    color: #f1c40f;
-    font-size: 1.8rem;
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
 }
 
-.project p {
-    color: #bbb;
-    font-size: 1.1rem;
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
 }
 
-/* Buttons */
-button {
+.cta {
     background-color: #f1c40f;
-    color: #0d0f27;
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: #111;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #e67e22;
-    transform: scale(1.1);
+.cta:hover {
+    background-color: #d1a100;
 }
 
-/* Kontaktbereich */
-#contact {
+/* Allgemeine Sektionen */
+.section {
+    padding: 80px 0;
+    background-color: #222;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
-    padding: 60px 20px;
-    background-color: #1c1c3c;
 }
 
-#contact h2 {
-    font-size: 2.5rem;
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
     color: #f1c40f;
-    text-shadow: 0 0 10px rgba(241, 196, 15, 0.8);
 }
 
-#contact p {
-    font-size: 1.2rem;
-    color: #ccc;
+/* Portfolio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.portfolio-item p {
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 /* Footer */
 footer {
     background-color: #111;
-    color: #888;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
+    color: #888;
 }
 
-/* Animationen */
+/* Animation */
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-@keyframes fadeInMoveUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+.fadeIn {
+    animation: fadeIn 1.5s ease-out;
 }
 
-/* Parallax Scrolling Effekt für den Hintergrund */
-body {
-    background-image: url('assets/images/space-background.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+.cta {
+    animation: fadeIn 2s ease-out;
 }
 
-/* Responsive Design für mobile Geräte */
-@media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
+/* Responsives Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
     }
 
-    header p {
+    .cta {
+        padding: 12px 25px;
         font-size: 1rem;
     }
 
-    #about, #projects, #contact {
-        padding: 40px 20px;
-    }
-
-    .project {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    button {
-        padding: 8px 16px;
-        font-size: 1rem;
+    .container {
+        width: 90%;
     }
 }
