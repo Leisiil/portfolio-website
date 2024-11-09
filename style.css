@@ -18,7 +18,7 @@ header {
     padding: 100px 0;
     background-image: url('assets/images/space-background.jpg');
     background-size: cover;
-    color: #fff;
+    color: #f1c40f;
     animation: fadeIn 2s ease-in-out;
 }
 
